@@ -12,7 +12,8 @@ on:
 
 jobs:
   release:
-    uses: pleme-io/substrate/.github/workflows/auto-release.yml@main
+    uses: pleme-io/substrate/.github/workflows/cargo-auto-release.yml@main
     with:
       bump-type: ${{ inputs.bump-type || 'patch' }}
+      regenerate-cargo-nix: "false"
     secrets: inherit
